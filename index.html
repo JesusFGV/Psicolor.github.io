@@ -1,65 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Psicología y Tecnología para Niños</title>
-  <link rel="stylesheet" href="../Styles/estilos_index.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Landing Page</title>
+  <style>
+    /* -------- RESET Y BASE -------- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #f8f9fa;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* -------- HEADER -------- */
+    header {
+      background: linear-gradient(90deg, #007bff, #00b4d8);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    /* -------- HERO -------- */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(180deg, #e3f2fd, #ffffff);
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      max-width: 600px;
+      margin-bottom: 25px;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .hero button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    .hero button:hover {
+      background-color: #0056b3;
+    }
+
+    /* -------- SECCIÓN DE SERVICIOS -------- */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 60px 20px;
+      background-color: #ffffff;
+    }
+    .feature {
+      background: #f1f3f5;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .feature h3 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    /* -------- FOOTER -------- */
+    footer {
+      background-color: #212529;
+      color: #adb5bd;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #00b4d8;
+    }
+
+    /* -------- RESPONSIVE -------- */
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 2rem; }
+    }
+  </style>
 </head>
 <body>
-  <!-- HERO / HEADER -->
-  <header class="hero" id="inicio">
-    <nav class="navbar">
-      <div class="logo">
-        <!-- Si tienes un PNG/SVG, descomenta la siguiente línea y ajusta la ruta -->
-        <!-- <img src="../Estilos/logo.png" alt="Logo" class="logo-img"> -->
-        <span class="logo-text">Psicología y Tecnología</span>
-      </div>
-      <div class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#modulos">Módulos</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-    </nav>
 
-    <div class="hero-content">
-      <h1>Una nueva forma de entender la mente infantil</h1>
-      <p>
-        Herramientas interactivas que combinan psicología, arte y tecnología para
-        observar emociones y desarrollo cognitivo en niños.
-      </p>
-      <div class="hero-buttons">
-        <a href="dibujo.html" class="btn">Empezar dibujo</a>
-        <a href="juegos.html" class="btn btn-outline">Explorar juegos</a>
-      </div>
-    </div>
+  <header>
+    <h1>Mi Landing Page</h1>
   </header>
 
-  <!-- MÓDULOS -->
-  <section id="modulos" class="modules">
-    <h2>Módulos principales</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>Dibujo emocional</h3>
-        <p>Expresión mediante color, forma y trazo para observar estados emocionales.</p>
-      </article>
-      <article class="card">
-        <h3>Minijuegos cognitivos</h3>
-        <p>Evaluación ligera de atención, memoria y control inhibitorio.</p>
-      </article>
-      <article class="card">
-        <h3>Panel del psicólogo</h3>
-        <p>Reportes visuales y métricas comparables entre sesiones.</p>
-      </article>
+  <section class="hero">
+    <h2>Bienvenido a mi sitio web</h2>
+    <p>
+      Esta es una landing page moderna, elegante y totalmente responsive.
+      Puedes usarla para presentar tu producto, servicio o portafolio personal.
+    </p>
+    <button onclick="alert('Gracias por tu interés!')">¡Contáctame!</button>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>🚀 Rápido</h3>
+      <p>Diseñada para cargar rápido y ofrecer una experiencia fluida.</p>
+    </div>
+    <div class="feature">
+      <h3>🎨 Atractivo</h3>
+      <p>Colores modernos, tipografía limpia y un diseño minimalista.</p>
+    </div>
+    <div class="feature">
+      <h3>📱 Responsive</h3>
+      <p>Se adapta perfectamente a móviles, tablets y pantallas grandes.</p>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer id="contacto" class="footer">
-    <p>© 2025 Psicología Infantil Interactiva — Desarrollado con ❤️</p>
+  <footer>
+    © 2025 Mi Landing Page | Desarrollado con ❤️ por <a href="colorear.html">TuNombre</a>
   </footer>
+
 </body>
 </html>
