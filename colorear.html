@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Módulo de Colorear</title>
+  <link rel="stylesheet" href="style_colorear.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Barra lateral -->
+    <aside class="toolbar" role="navigation" aria-label="Herramientas">
+      <section class="panel image-picker">
+        <div class="thumbnails">
+          <img src="kakashi.png" alt="Kakashi" class="thumb" onclick="loadImage('kakashi.png')">
+          <img src="naruto.png"  alt="Naruto"  class="thumb" onclick="loadImage('naruto.png')">
+        </div>
+        <button class="btn-reset" onclick="resetCanvas()">🗑️ Nuevo lienzo</button>
+      </section>
+
+      <section class="panel color-panel">
+        <div class="color-tools">
+          <!-- Selector de color + vista previa -->
+          <div class="custom-color">
+            <div class="color-preview" id="color-preview" title="Vista previa"></div>
+            <input type="color" id="input-color" aria-label="Elegir color" />
+          </div>
+
+          <!-- Borrador -->
+          <button id="btn-eraser" class="btn-eraser" type="button" aria-pressed="false" title="Borrador">
+            🩹 Borrador
+          </button>
+
+          <!-- Grosor -->
+          <div class="thickness">
+            <label for="input-size">Grosor: <span id="size-value">12</span> px</label>
+            <input type="range" id="input-size" min="2" max="60" step="1" value="12" />
+          </div>
+        </div>
+      </section>
+
+      <div class="actions-bottom">
+        <a href="actividades.html" class="btn-back">← Volver</a>
+        <button class="btn-save" onclick="guardarInformacion()">💾 Guardar</button>
+      </div>
+    </aside>
+
+    <!-- Área de trabajo -->
+    <main class="workspace">
+      <div class="stage">
+        <div class="canvas-frame">
+          <div class="canvas-stack" id="canvas-stack">
+            <canvas id="canvas-draw" aria-label="Lienzo de dibujo"></canvas>
+            <canvas id="canvas-img"  aria-label="Lienzo de imagen"></canvas>
+          </div>
+        </div>
+        <div id="warn" class="warn" hidden></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script_colorear.js"></script>
+</body>
+</html>
